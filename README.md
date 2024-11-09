@@ -23,7 +23,7 @@ has_many :purchases
 
 |Column                 |Type            |Options                        |
 | ------------------    | ------         | ------------------------------|
-|user                   |references      |null: false,unique:true        |
+|user                   |references      |null: false,foreign_key: true  |
 |item_name              |string          |null: false                    |
 |description            |text            |null: false                    |
 |price                  |integer         |null: false                    |
@@ -31,7 +31,7 @@ has_many :purchases
 |condition_id           |integer         |null: false                    |
 |shipping_fee_status_id |integer         |null: false                    |
 |prefecture_id          |integer         |null: false                    |
-|shipping_days_id       |integer         |null: false                    |
+|shipping_day_id       |integer         |null: false                    |
 
 
 
@@ -51,7 +51,7 @@ belongs_to :user
 ### Association
 belongs_to :user
 belongs_to :item
-has_one :shippinginfo
+has_one :shippingInfo
 
 
 ## shippingInfosテーブル
