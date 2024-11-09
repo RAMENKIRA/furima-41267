@@ -19,7 +19,7 @@ has_many :purchases
 
 
 
-## Itemsテーブル
+## itemsテーブル
 
 |Column                 |Type            |Options                        |
 | ------------------    | ------         | ------------------------------|
@@ -51,10 +51,10 @@ belongs_to :user
 ### Association
 belongs_to :user
 belongs_to :item
-has_one :shippingInfo
+has_one :shipping_infos
 
 
-## shippingInfosテーブル
+## shipping_infosテーブル
 
 |Column              |Type      |Options                       |
 | ------------------ | ------   | ---------------------------- |
