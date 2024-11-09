@@ -11,6 +11,7 @@
 |katakana_last_name       |string    |null: false                          |
 |katakana_first_name      |string    |null: false                          |
 |nickname                 |string    |null: false                          |
+|birthday                 |date      |null: false                          |
 
 ### Association
 has_many :items
@@ -22,16 +23,10 @@ has_many :purchases
 
 |Column                 |Type            |Options                        |
 | ------------------    | ------         | ------------------------------|
+|user                   |references      |null: false,unique:true        |
 |item_name              |string          |null: false                    |
-|item_name              |string          |null: false                    |
-|item_image             |string          |null: false                    |
 |description            |text            |null: false                    |
-|price                  |string          |null: false                    |
-|category               |string          |null: false                    |
-|condition              |string          |null: false                    |
-|shipping_free          |string          |null: false                    |
-|shipping_from          |string          |null: false                    |
-|shipping_days          |string          |null: false                    |
+|price                  |integer         |null: false                    |
 |category_id            |integer         |null: false                    |
 |condition_id           |integer         |null: false                    |
 |shipping_fee_status_id |integer         |null: false                    |
@@ -42,7 +37,7 @@ has_many :purchases
 
 
 ### Association
-has_one :purchases
+has_one :purchase
 belongs_to :user
 
 
@@ -56,6 +51,8 @@ belongs_to :user
 ### Association
 belongs_to :user
 belongs_to :item
+has_one :shippinginfo
+
 
 ## shippingInfosテーブル
 
